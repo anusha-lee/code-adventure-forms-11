@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+/**************
+General styling
+***************/
+
+* {
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    background: rgb(250,250,250); /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, rgba(250,250,250,1) 0%, rgba(200,200,200,1) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(250,250,250,1) 0%,rgba(200,200,200,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, rgba(250,250,250,1) 0%,rgba(200,200,200,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#c8c8c8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background-repeat: repeat;
+}
+form {
+    width: 95%;
+    margin: 0 auto;
+    background-color: #fffff0;
+    padding: 10px;
+}
+fieldset {
+    border: none;
+}
+legend {
+    font-weight: bold;
+    color: #729f98;
+    font-size: 1.2rem;
+}
+label {
+    margin: 6px 0;
+    border: solid 1px #DCDCDC;
+}
+input {
+    border: none;
+    text-indent: 8px;
+    margin: 10px 0 10px 5px;
+    padding: 0.4rem 0;
+    outline: none;
+}
+.acc-wrap label {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 25px auto;
+    line-height: 30px;
+    align-items: center;
+}
+.acc-wrap input {
+    width: 96%;
+    border-left: #D3D3D3;
+}
+.acc-wrap i {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    color: #adabab;
+    margin-left: 12px;
+}
+input:focus, select:focus {
+  	background-color: #dbe9d8;
+	  outline: none;
+}
+.field-birthdate,
+.field-gender {
+    display: inline-block;
+    width: 97%;
+    vertical-align: text-top;
+    padding: 0.35em 0.2em 0.625em;
+}
+.birth-date {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr;
+    grid-column-gap: 3px;
+    margin: 0;
+}
+.birth-date select {
+  	padding: 1.05rem 0;
+    margin: 0;
+}
+#birth-date {
+    margin-bottom: 7px;
+}
+  /*****************************
+   Gender radio button
+ https://codepen.io/gabrielferreira/pen/oYxNVy
+   *****************************/
+
+.gender-toggle {
+    left: -99999px;
+    position: absolute;
+}
+.gender-toggle-label {
+    display: inline-block;
+    float: left;
+    border: 1px solid #DCDCDC;
+    cursor: pointer;
+    width: 50%; /*** change in larger POV ***/
+    padding: 12px;
+    line-height: 30px;
+    text-align: center;
+}
+.gender-toggle:checked + .gender-toggle-label {
+    background-color: #729f98;
+    color: white;
+    text-shadow: 1px 1px #696969;
+}
+.gender-toggle + .gender-toggle-label {
+    background-color: #e3e0cf;
+    color: #173e43;
+}
+
+/***************************
+        payment tabs
+****************************/
+#card-tab, #paypal-tab {
+    left: -99999px;
+    position: absolute;
+}
+.tab-labels {
+  	display: inline-block;
+  	float: left;
+  	width: 50%;
+  	color: #173e43;
+  	background-color: #e3e0cf;
+  	cursor: pointer;
+  	line-height: 30px;
+  	padding: 12px;
+  	text-align: center;
+}
+.tab-content {
+	  display: none;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+#card-tab:checked ~ #creditcard-content,
+#paypal-tab:checked ~ #paypal-content {
+	  display: block;
+}
+#card-tab:checked + .tab-labels,
+#paypal-tab:checked + .tab-labels {
+    background-color: #729f98;
+    color: white;
+    text-shadow: 1px 1px #696969;
+}
+.card-number {
+    display: inline-block;
+    width: 100%;
+}
+.cvc {
+    display: inline-block;
+    width: 49%;
+    margin: 4px 0;
+}
+.card-number i {
+    width: 18px;
+    height: 18px;
+    padding-left: 5px;
+    display: inline-block;
+    color: #adabab;
+}
+.cvc i {
+    width: 18px;
+    height: 18px;
+    padding-left: 8px;
+    display: inline-block;
+    color: #adabab;
+}
+.card-number input {
+	  width: 90%;
+}
+.cvc input {
+      border: none;
+      width: 80%;
+}
+.fa-credit-card,
+.fa-lock {
+	  padding-right: 2px;
+}
+.fa-cc-visa,
+.fa-cc-paypal {
+	  padding-right: 8px;
+}
+.expire-date {
+    display: inline-block;
+    width: 49%;
+    border: solid 1px #DCDCDC;
+    padding: 0.9rem 0;
+}
+.card-month,
+.card-year {
+    border: 0px;
+    width: 46%;
+}
+
+.accept {
+	margin-top: 0.5rem;
+  width: 100%;
+}
+.accept label {
+	line-height: 200%;
+}
+button {
+	width: 100%;
+	height: 60px;
+	margin: 40px 0;
+	line-height: 200%;
+	background-color: #729f98;
+	color: white;
+	text-shadow: 1px 1px #696969;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 1.5rem;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	transition: all ease-in-out 0.4s;
+}
+button:hover {
+	background-color: #CD853F;
+}
+#terms, #text {
+  display: inline-block;
+}
+#terms {
+  width: 18px;
+	height: 18px;
+  padding-top: 100px;
+  cursor: pointer;
+  margin: auto;
+  vertical-align: middle;
+}
+.terms {
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width:560px) and (max-width:780px) {
+
+  .container {
+    width: 70%;
+    margin: 0 auto;
+   }
+  .gender-toggle-label {
+    width: 50%;
+  }
+  .cvc input {
+  	  width: 82%;
+  }
+  .expire-date {
+      width: 49%;
+      padding: 0.88rem 0;
+  }
+  .field-birthdate,
+  .field-gender {
+    width: 47%;    
+  }
+}
+@media (min-width:781px) and (max-width:1040px) {
+
+  .container {
+    width: 75%;
+    margin: 0 auto;
+   }
+  .gender-toggle-label {
+    width: 50%;
+  }
+  .cvc input {
+  	  width: 88%;
+  }
+  .expire-date {
+      width: 49%;
+      padding: 0.88rem 0;
+  }
+  .field-birthdate,
+  .field-gender {
+    width: 47%;    
+  }
+}
+
+
+@media (min-width:1041px) {
+
+  .container {
+    width: 50%;
+    margin: 0 auto;
+   }
+  .gender-toggle-label {
+    width: 50%;
+  }
+  .cvc input {
+  	  width: 85%;
+  }
+  .expire-date {
+      width: 50%;
+      padding: 0.87rem 0;
+  }
+  .field-birthdate,
+  .field-gender {
+    width: 47%;    
+  }
+}
