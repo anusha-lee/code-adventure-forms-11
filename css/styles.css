@@ -132,6 +132,7 @@ input:focus, select:focus {
   	line-height: 30px;
   	padding: 12px;
   	text-align: center;
+	font-size: 14px;
 }
 .tab-content {
 	  display: none;
@@ -241,7 +242,7 @@ button:hover {
   cursor: pointer;
 }
 
-@media (min-width:560px) and (max-width:780px) {
+@media (min-width:560px) {
 
   .container {
     width: 70%;
@@ -249,6 +250,9 @@ button:hover {
    }
   .gender-toggle-label {
     width: 50%;
+  }
+  .tab-labels {
+  	font-size: 16px;
   }
   .cvc input {
   	  width: 82%;
@@ -262,7 +266,7 @@ button:hover {
     width: 47%;    
   }
 }
-@media (min-width:781px) and (max-width:1040px) {
+@media (min-width:780px) {
 
   .container {
     width: 75%;
@@ -270,6 +274,9 @@ button:hover {
    }
   .gender-toggle-label {
     width: 50%;
+  }
+  .tab-labels {
+  	font-size: 16px;
   }
   .cvc input {
   	  width: 88%;
@@ -285,7 +292,7 @@ button:hover {
 }
 
 
-@media (min-width:1041px) {
+@media (min-width:1040px) {
 
   .container {
     width: 50%;
@@ -293,6 +300,9 @@ button:hover {
    }
   .gender-toggle-label {
     width: 50%;
+  }
+  .tab-labels {
+  	font-size: 16px;
   }
   .cvc input {
   	  width: 85%;
